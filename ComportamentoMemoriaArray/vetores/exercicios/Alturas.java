@@ -10,7 +10,7 @@ public class Alturas {
 		Scanner scan = new Scanner(System.in);
 		System.out.print("Leigth for vect: ");
 		int tam = scan.nextInt();
-		Pesson[] vect = new Pesson[tam];
+		Person[] vect = new Person[tam];
 		
 		double total = 0;
 		int qtdMenorIdade = 0;
@@ -25,7 +25,7 @@ public class Alturas {
 			
 			System.out.print("Altura: ");
 			double altura = scan.nextDouble();
-			vect[i] = new Pesson(name, idade, altura);
+			vect[i] = new Person(name, idade, altura);
 			
 			total += altura;
 			
@@ -34,10 +34,10 @@ public class Alturas {
 			}
 		}
 		
-		System.out.printf("Altura média: %f%n", (total/vect.length));
-		System.out.println("Pessoas com menos de 16 anos: " + ((double) qtdMenorIdade / vect.length) * 100.0 + "%");
+		System.out.printf("Altura média: %.2f%n", (total/vect.length));
+		System.out.printf("Pessoas com menos de 16 anos: %.1f%%\n", ((double) qtdMenorIdade / vect.length) * 100.0);
 		
-		for(Pesson pessoa : vect) {
+		for(Person pessoa : vect) {
 			if(pessoa.getIdade() < 16) {
 				System.out.println(pessoa.getNome());
 			}
