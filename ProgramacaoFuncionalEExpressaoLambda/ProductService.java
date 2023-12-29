@@ -6,10 +6,10 @@ import java.util.function.Predicate;
 import ComportamentoMemoriaArray.vetores.application.Product;
 
 public class ProductService {
-	public double filteredSum(List<Product> list, Predicate<Product> c) {
+	public double filteredSum(List<Product> list, Predicate<Product> criteria) {
 		double sum = 0;
 		for(Product p: list) {
-			if(c.test(p)) {
+			if(criteria.test(p)) {
 				sum += p.getPrice();
 			}
 		}
