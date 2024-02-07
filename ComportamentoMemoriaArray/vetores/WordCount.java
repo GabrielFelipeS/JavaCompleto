@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.regex.Pattern;
 
 public class WordCount {
 	public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class WordCount {
 		}
 	}
 	
-	public static Map phrase(String input) {
+	public static Map<String, Integer> phrase(String input) {
 		 Map<String, Integer> map = new HashMap<String, Integer>();
 	        char anterior = ' ';
 	        StringBuilder builder = new StringBuilder();

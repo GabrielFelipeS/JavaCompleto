@@ -30,6 +30,7 @@ public class InstanciandoDataHora {
 		DateTimeFormatter fm01 = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		LocalDate d08 = LocalDate.parse("20/07/2022", fm01);
 		LocalDateTime d09 = LocalDateTime.parse("20/07/2022 01:30", DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm"));
+
 		System.out.println("d08 = " + d08);
 		System.out.println("d09 = " + d09);
 		
